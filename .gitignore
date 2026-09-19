@@ -1,0 +1,29 @@
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.eslintcache
+
+# Python / FastAPI
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.Python
+backend/env/
+backend/pip-log.txt
+backend/pip-delete-this-directory.txt
+
+# Databases
+backend/leads.db
+backend/*.sqlite3
+backend/*.db
+
+# Env variables
+.env
+backend/.env
+
+# OS Files
+.DS_Store
+Thumbs.db
