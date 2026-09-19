@@ -41,7 +41,7 @@ class LeadResponse(BaseModel):
     class Config:
         from_attributes = True
 
-@router.post("/", response_model=LeadResponse)
+@router.post("", response_model=LeadResponse)
 def create_lead(lead: LeadCreate, db: Session = Depends(get_db)):
     # Include additional notes in requirement for now
     db_lead = Lead(
@@ -60,7 +60,7 @@ def create_lead(lead: LeadCreate, db: Session = Depends(get_db)):
     db.refresh(db_lead)
     return db_lead
 
-@router.get("/", response_model=List[LeadResponse])
+@router.get("", response_model=List[LeadResponse])
 def get_leads(db: Session = Depends(get_db)):
     leads = db.query(Lead).all()
     return leads
